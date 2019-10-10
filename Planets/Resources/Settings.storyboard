@@ -43,13 +43,18 @@
                         <viewLayoutGuide key="safeArea" id="YNW-im-o6i"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="j0S-YG-SME">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8aj-j6-tek"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8aj-j6-tek">
+                            <connections>
+                                <segue destination="keG-xn-ORp" kind="unwind" unwindAction="unwindToPlanetsCollectionViewController:" id="5s6-uU-VoS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="shouldShowPlutoSwitch" destination="rLd-f6-G4v" id="vId-1o-py5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0l-Me-Wgw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="keG-xn-ORp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="97.767857142857139"/>
         </scene>
