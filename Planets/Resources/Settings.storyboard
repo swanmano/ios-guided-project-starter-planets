@@ -11,7 +11,7 @@
         <!--Settings-->
         <scene sceneID="DUg-vz-zof">
             <objects>
-                <viewController id="kxu-VU-avL" sceneMemberID="viewController">
+                <viewController id="kxu-VU-avL" customClass="SettingsViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bD6-9s-0IO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLd-f6-G4v">
                                         <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changeShouldShowPluto:" destination="kxu-VU-avL" eventType="valueChanged" id="6ud-z7-X5T"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -42,6 +45,9 @@
                     <navigationItem key="navigationItem" title="Settings" id="j0S-YG-SME">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="8aj-j6-tek"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="shouldShowPlutoSwitch" destination="rLd-f6-G4v" id="vId-1o-py5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0l-Me-Wgw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
